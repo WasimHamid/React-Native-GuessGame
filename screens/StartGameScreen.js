@@ -65,7 +65,7 @@ const StartGameScreen = props => {
       }}
     >
       <View style={styles.screen}>
-        <Text style={styles.title}>Start a New Game!</Text>
+        <Text style={styles.title}>Play Game!</Text>
         <Card style={styles.inputContainer}>
           <Text>Select a Number</Text>
           <Input
@@ -81,16 +81,16 @@ const StartGameScreen = props => {
           <View style={styles.buttonContainer}>
             <View style={styles.buttonSize}>
               <Button
-                title="Reset"
-                onPress={resetInputHandler}
-                color={Colors.accent}
+                title="Confirm"
+                onPress={ConfirmInputHandler}
+                color={Colors.primary}
               />
             </View>
             <View style={styles.buttonSize}>
               <Button
-                title="Confirm"
-                onPress={ConfirmInputHandler}
-                color={Colors.primary}
+                title="Reset"
+                onPress={resetInputHandler}
+                color={Colors.accent}
               />
             </View>
           </View>
@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     width: "100%",
     justifyContent: "space-between",
-    paddingHorizontal: 15
+    paddingHorizontal: 1
   },
   buttonSize: {
     width: 100
@@ -130,6 +130,8 @@ const styles = StyleSheet.create({
     textAlign: "center"
   },
   summary: {
+    width: 300,
+    maxWidth: "80%",
     marginTop: 20,
     alignItems: "center"
   }
